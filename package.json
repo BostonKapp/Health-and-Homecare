@@ -1,15 +1,25 @@
 {
   "name": "health-and-homecare",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
-    "react-dom": "^16.8.6",
-    "react": "^16.8.6"
+    "axios": "^0.18.0",
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.5",
+    "morgan": "^1.9.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix health-homecare",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "repository": {
     "type": "git",
@@ -20,5 +30,7 @@
   "bugs": {
     "url": "https://github.com/BostonKapp/Health-and-Homecare/issues"
   },
-  "homepage": "https://github.com/BostonKapp/Health-and-Homecare#readme"
+  "homepage": "https://github.com/BostonKapp/Health-and-Homecare#readme",
+  "keywords": [],
+  "description": ""
 }
