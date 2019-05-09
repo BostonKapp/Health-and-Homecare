@@ -1,0 +1,41 @@
+import React from "react";
+
+class Home extends React.Component {
+    constructor() { 
+        super()
+        this.state = {
+          data: [],
+          id: 0,
+          message: null,
+          intervalIsSet: false,
+          idToDelete: null,
+          idToUpdate: null,
+          objectToUpdate: null
+        };
+      }
+
+      render() {
+          
+        return (
+            <nav>
+                <div class="row" align="center">
+                    <div class="col s12 m6">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                        <span class="card-title">Card Title</span>
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                        {/* <a href="#">Login</a>
+                        <a href="#">Sign Up</a> */}
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </nav>
+        )
+      };
+} 
+
+export default Home;
