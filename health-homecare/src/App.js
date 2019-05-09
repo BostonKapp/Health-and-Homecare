@@ -4,14 +4,15 @@ import Nav from ".\components\Nav\Nav.js"
 
 class App extends Component {
   // initialize our state 
-  state = {
-    data: [],
-    id: 0,
-    message: null,
-    intervalIsSet: false,
-    idToDelete: null,
-    idToUpdate: null,
-    objectToUpdate: null
+  render() {
+    return(
+
+      <div>
+        <Nav />
+
+      </div>
+    )
+  }
   };
 
   // when component mounts, first thing it does is fetch all existing data in our db
@@ -23,7 +24,7 @@ class App extends Component {
       let interval = setInterval(this.getDataFromDb, 1000);
       this.setState({ intervalIsSet: interval });
     }
-  }
+  };
 
   // never let a process live forever 
   // always kill a process everytime we are done using it
@@ -32,7 +33,7 @@ class App extends Component {
       clearInterval(this.state.intervalIsSet);
       this.setState({ intervalIsSet: null });
     }
-  }
+  };
 
   // just a note, here, in the front end, we use the id key of our data object 
   // in order to identify which we want to Update or delete.
